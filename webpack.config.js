@@ -17,7 +17,7 @@ const config = {
   module: {
     rules: [
       {
-        test: /\.jpg$/i,
+        test: /\.(png|jpe?g|gif)$/i, //can spot any kind of image
         use: [
           {
             loader: "file-loader",
