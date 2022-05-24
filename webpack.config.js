@@ -1,7 +1,7 @@
 const webpack = require("webpack");
-const path = require("path");
 const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 const WebpackPwaManifest = require("webpack-pwa-manifest");
+const path = require("path");
 
 module.exports = {
   entry: {
@@ -24,10 +24,10 @@ module.exports = {
             options: {
               esModule: false,
               name (file) {
-                return "[path][name].[ext]"
+                return "[path][name].[ext]";
               },
               publicPath: function(url) {
-                return url.replace("../", "/assets/")
+                return url.replace("../", "/assets/");
               }
             }  
           },
@@ -44,7 +44,7 @@ module.exports = {
       jQuery: "jquery"
     }),
     new BundleAnalyzerPlugin({
-      analyzerMode: "static", // the report outputs to an HTML file in the dist folder
+      analyzerMode: "static" // the report outputs to an HTML file in the dist folder
     }),
     new WebpackPwaManifest({
       name: "Food Event",
@@ -64,3 +64,5 @@ module.exports = {
   ],
   mode: 'development'
 };
+
+module.exports = config;
