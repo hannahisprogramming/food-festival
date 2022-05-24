@@ -3,7 +3,7 @@ const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPl
 const WebpackPwaManifest = require("webpack-pwa-manifest");
 const path = require("path");
 
-module.exports = {
+const config = {
   entry: {
     app: "./assets/js/script.js",
     events: "./assets/js/events.js",
